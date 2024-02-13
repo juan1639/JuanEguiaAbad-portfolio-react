@@ -1,0 +1,78 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --blanco: rgb(240, 240, 240);
+  --blanco-azulado:rgb(200, 245, 255);
+  --azul-masclaro: rgb(82, 211, 216);
+  --azul-claro: rgb(56, 135, 190);
+  --azul-darkcyan: darkcyan;
+  --azul-royal: royalblue;
+  --azul-medio: rgb(56, 65, 157);
+  --azul-marino: rgb(32, 14, 58);
+  --letra-tituloXL: 40px;
+  --letra-grande: 28px;
+  --letra-normal: 24px;
+  --letra-mini: 20px;
+  --letra-ultramini: 16px;
+  --letra-responsive-tituloXL: 20px;
+  --letra-responsive-grande: 16px;
+  --letra-responsive-normal: 14px;
+  --letra-responsive-mini: 12px;
+  --letra-responsive-ultramini: 10px;
+  --letra-responsive-ultramini2: 8px;
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  place-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url('./assets/img/fondo-azulOscuro.png');
+}
+#root {
+  width: inherit;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+/* a:nth-of-type(2) .logo {
+  animation: logo-spin infinite 20s linear;
+} */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 2.4em;
+  line-height: 1.1;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}

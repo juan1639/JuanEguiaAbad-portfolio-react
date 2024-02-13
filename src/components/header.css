@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    height: fit-content;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+}
+.foto {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    /* background-image: url('./assets/img/fotoJuan.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nombre {
+    width: 60vw;
+    height: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nombre h1 {
+    color: var(--azul-masclaro);
+}
+.nombre h3 {
+    color: var(--azul-claro);
+    font-size: 1.8em;
+}
