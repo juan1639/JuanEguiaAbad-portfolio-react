@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { Header } from './components/Header'
 import { Sobremi } from './components/Sobremi'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const urlFoto = {
     backgroundImage: 'url(' + './assets/img/fotoJuan.jpg' + ')'

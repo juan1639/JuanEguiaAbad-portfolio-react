@@ -1,48 +1,63 @@
 import { Titulo } from './sobremi-comp/titulo'
+import { Settings } from '../constants/constants.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faCaretUp, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 import './sobremi.css'
 
 export const Sobremi = ({parrafo1, parrafo2}) => {
 
+    const [mostrar, setMostrar] = useState(false)
+    // const [anima, setAnima] = useState('animation: none')
+
+    const handleClick = () => {
+
+        console.log('click')
+        setMostrar(!mostrar)
+        // setAnima('animation: ocultarLenguajes 1s 1 forwards')
+    }
+
     return (
         <>
             <article className="sobremi"> 
-                <div className="h2-div-descripcion">
+                <div className="h2-div-descripcion" onClick={handleClick}>
                     <h2 className="h2" id="h2-sobremi">Sobre mí... </h2>
-                    <FontAwesomeIcon className="h2" icon={faCaretDown}/>
+                    {!mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretDown}/>}
+                    {mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretUp}/>}
                 </div>
 
-                <section className="h2-contenedor">
-                    <div>
-                        <p className='parrafo-sobremi'>{parrafo1}</p>
-                        <p className='parrafo-sobremi'>{parrafo2}</p>
-                        <div id="contacto-mail"><a href="mailto:juaneguiabad1639@gmail.com">Contactar conmigo vía e-mail</a></div>
-                    </div>
+                {
+                    mostrar &&
+                    <section className="h2-contenedor">
+                        <div>
+                            <p className='parrafo-sobremi'>{parrafo1}</p>
+                            <p className='parrafo-sobremi'>{parrafo2}</p>
+                            <div id="contacto-mail">
+                                <a href="mailto:juaneguiabad1639@gmail.com">Contactar conmigo <FontAwesomeIcon className="h2 icono" icon={faEnvelope}/></a>
+                            </div>
+                        </div>
 
-                    <div>
-                        <h3>Mis títulos</h3>
+                        <div>
+                            <h3>Mis títulos</h3>
 
-                        <figure id="mis-titulos">
-                            <Titulo 
-                                id="titulo-html"
-                                href="./titulo-frontend.html"
-                            >HTML5 y CSS3</Titulo>
-                            
-                            <Titulo 
-                                id="titulo-react"
-                                href="./titulo-react.html"
-                            >JavaScript Avanzado</Titulo>
+                            <figure id="mis-titulos">
+                                {
+                                    Object.keys(Settings.misTitulos).map(titulo => {
 
-                            <Titulo 
-                                id="titulo-java"
-                                href="./titulo-appweb-java.html"
-                            >Desarrollo apps web Java</Titulo>
-
-                            <figcaption></figcaption>
-                        </figure>
-                    </div>
-                </section>
+                                        return (
+                                            <Titulo 
+                                                key={Settings.misTitulos[titulo].id}
+                                                id={Settings.misTitulos[titulo].id}
+                                                href={Settings.misTitulos[titulo].href}
+                                            >{Settings.misTitulos[titulo].texto}</Titulo>
+                                        )
+                                    })
+                                }
+                                <figcaption></figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                }
             </article>
         </>
     )

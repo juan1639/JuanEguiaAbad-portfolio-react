@@ -35,6 +35,7 @@ body {
   height: 100vh;
   min-width: 320px;
   min-height: 100vh;
+  padding: 0 1em;
   background-image: url('./assets/img/fondo-azulOscuro.png');
 }
 #root {
@@ -47,7 +48,7 @@ body {
 /* a:nth-of-type(2) .logo {
   animation: logo-spin infinite 20s linear;
 } */
-.h2 {
+.h2.icono {
   animation: animaCarets 3s infinite;
 }
 a {
@@ -92,6 +93,41 @@ button:hover {
   100% {
     transform: scale(1);
     text-shadow: none;
+  }
+}
+@keyframes animaZoomTxt {
+  0% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(1.15);
+    text-shadow: 1px 1px 9px var(--blanco);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
+@keyframes mostrarLenguajes {
+  0% {
+    height: 0vw;
+    padding: 0 1em;
+  }
+
+  100% {
+    height: fit-content;
+    padding: 4vw 1em;
+  }
+}
+@keyframes ocultarLenguajes {
+  0% {
+    height: fit-content;
+    padding: 4vw 1em;
+  }
+  100% {
+    height: 0vw;
+    padding: 0 1em;
   }
 }
 /* -------------------------------------------------

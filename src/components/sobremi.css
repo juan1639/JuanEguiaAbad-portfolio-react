@@ -11,6 +11,7 @@
     margin-left: 1em;
     padding: 1em 1em 0.2em 0.4em;
     color: var(--azul-masclaro);
+    cursor: pointer;
 }
 #h2-sobremi {
     /* color: var(--blanco-azulado); */
@@ -37,7 +38,7 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 0.2em 1em;
+    padding: 0.2em 1.5em;
     text-align: justify;
 }
 .parrafo-sobremi {
@@ -47,13 +48,14 @@
 }
 #contacto-mail {
     font-size: var(--letra-mini);
-    margin: 1em 0.5em 2em 1em;
-    padding-left: 0.4em;
+    margin: 1em 0.2em 2em 0.2em;
+    padding-left: 0.2em;
     font-style: italic;
     color: var(--azul-royal);
 }
 .h2-contenedor div h3 {
     font-size: var(--letra-grande);
+    font-style: oblique;
     color: var(--blanco);
     margin-bottom: 0.2em;
 }
@@ -69,19 +71,23 @@
     text-align: left;
 }
 #mis-titulos a {
-    font-size: var(--letra-normal);
+    font-size: var(--letra-mini);
     font-style: italic;
-    margin: 1em 0.5em 1em 1em;
+    color: var(--azul-darkcyan);
+    margin: 1em 0.4em 1em 0.8em;
     /* color: var(--azul-masclaro); */
 }
 #mis-titulos img {
     width: 100%;
     height: 100%;
 }
-#titulo-html:hover, #titulo-react:hover, #titulo-java:hover {
+.titulo:hover {
     transform: scale(1.1, 1.1) translateX(9%);
     /* background-color: var(--azul-medio); */
     border-radius: 8px;
+}
+.h2-contenedor div h3 {
+    animation: animaZoomTxt 5s infinite;
 }
 /* -------------------------------------------------
 RESPONSIVE
@@ -133,7 +139,7 @@ RESPONSIVE
     }
 }
 /* ------------------------------------------ */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     #contacto-mail {
         font-size: var(--letra-responsive-ultramini);
         margin: 1em 0.5em 2em 1em;
