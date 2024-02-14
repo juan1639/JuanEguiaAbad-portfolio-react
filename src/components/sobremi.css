@@ -45,8 +45,15 @@
     color: var(--azul-darkcyan);
     margin: 1em 0;
 }
+#contacto-mail {
+    font-size: var(--letra-mini);
+    margin: 1em 0.5em 2em 1em;
+    padding-left: 0.4em;
+    font-style: italic;
+    color: var(--azul-royal);
+}
 .h2-contenedor div h3 {
-    font-size: var(--letra-normal);
+    font-size: var(--letra-grande);
     color: var(--blanco);
     margin-bottom: 0.2em;
 }
@@ -62,6 +69,7 @@
     text-align: left;
 }
 #mis-titulos a {
+    font-size: var(--letra-normal);
     font-style: italic;
     margin: 1em 0.5em 1em 1em;
     /* color: var(--azul-masclaro); */
@@ -75,3 +83,66 @@
     /* background-color: var(--azul-medio); */
     border-radius: 8px;
 }
+/* -------------------------------------------------
+RESPONSIVE
+------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    .h2-div-descripcion {
+        margin-left: 0.5em;
+        padding: 1em 1em 0.2em 0.4em;
+    }
+    .h2 {
+        padding: 0.1em 0.3em;
+        font-size: var(--letra-responsive-grande);
+    }
+    .sobremi .h2-contenedor {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1.2em 1em;
+    }
+    .h2-contenedor div {
+        padding: 0.2em 1em;
+    }
+    .parrafo-sobremi {
+        font-size: var(--letra-responsive-mini);
+        margin: 0.5em 0;
+    }
+    #contacto-mail {
+        font-size: var(--letra-responsive-ultramini);
+        margin: 1em 0.5em 2em 1em;
+        padding-left: 0.4em;
+    }
+    .h2-contenedor div h3 {
+        font-size: var(--letra-responsive-grande);
+        margin-bottom: 0.2em;
+    }
+    #mis-titulos {
+        box-shadow: 1px 0 8px var(--azul-masclaro);
+        padding: 0.5em 0.5em 0.5em 0;
+        margin: 1em 0;
+        text-align: left;
+    }
+    #mis-titulos a {
+        font-size: var(--letra-responsive-mini);
+        margin: 1em 0.5em 1em 1em;
+        /* color: var(--azul-masclaro); */
+    }
+    #mis-titulos img {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* ------------------------------------------ */
+@media (max-width: 768px) {
+    #contacto-mail {
+        font-size: var(--letra-responsive-ultramini);
+        margin: 1em 0.5em 2em 1em;
+        padding-left: 0.4em;
+    }
+    #mis-titulos a {
+        font-size: var(--letra-responsive-ultramini);
+        margin: 1em 0.5em 1em 1em;
+        /* color: var(--azul-masclaro); */
+    }
+}
+

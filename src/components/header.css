@@ -31,3 +31,19 @@
     font-size: 1.8em;
     margin-right: 9%;
 }
+/* -------------------------------------------------
+RESPONSIVE
+------------------------------------------------- */
+@media (max-width:768px) {
+    .header {
+      padding: 0.4em;
+      justify-content: space-around;
+    }
+    .nombre h1 {
+        margin-right: 5%;
+    }
+    .nombre h3 {
+        font-size: 0.8em;
+        margin-right: 5%;
+    }
+}
