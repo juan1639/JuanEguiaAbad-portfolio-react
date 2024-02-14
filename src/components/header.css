@@ -4,6 +4,7 @@
     border-radius: 6px;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2em;
 }
 .foto {
     width: 15vw;
@@ -23,8 +24,10 @@
 }
 .nombre h1 {
     color: var(--azul-masclaro);
+    margin-right: 9%;
 }
 .nombre h3 {
     color: var(--azul-claro);
     font-size: 1.8em;
+    margin-right: 9%;
 }
