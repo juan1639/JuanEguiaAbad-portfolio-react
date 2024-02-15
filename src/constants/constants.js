@@ -4,7 +4,7 @@ export class Settings {
     
     static endpoint = './src/json/proyectos.json';
 
-    static offSetHorizontalElementos = 40;
+    static offSetHorizontalElementos = 50;
     static contador = undefined;
 
     static valores_iniciales = {

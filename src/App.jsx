@@ -1,17 +1,21 @@
 import { Header } from './components/Header'
 import { Sobremi } from './components/Sobremi'
 import { MisProyectos } from './components/MisProyectos'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
 
-  const cargaJson = useEffect(() => {
+  const [loadingJson, setLoadingJson] = useState(true)
+  const [infoJson, setInfoJson] = useState({})
+
+  useEffect(() => {
 
     fetch('./src/json/proyectos.json')
       .then(res => res.json())
       .then(response => {
+        setLoadingJson(false)
+        setInfoJson(response.proyectos)
         console.log(response.proyectos)
-        return response.proyectos
       })
     
   }, [])
@@ -33,7 +37,7 @@ function App() {
         parrafo2='Los proyectos que se pueden ver en esta página están hechos en su mayoría en vanilla javaScript.'
       />
 
-      <MisProyectos json={cargaJson}/>
+      {!loadingJson && <MisProyectos json={infoJson}/>}
     </>
   )
 }

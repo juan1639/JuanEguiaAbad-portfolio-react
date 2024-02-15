@@ -1,4 +1,4 @@
-import { Tarjeta } from './Tarjeta.jsx'
+import { Tarjeta } from './misproyectos-comp/Tarjeta.jsx'
 import { Settings } from '../constants/constants.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons'
@@ -7,19 +7,29 @@ import './misproyectos.css'
 
 export const MisProyectos = ({json}) => {
 
-    const [mostrar, setMostrar] = useState(false)
-    // const [anima, setAnima] = useState('animation: none')
+    console.log(json)
 
-    const urlFoto = {
-        backgroundImage: 'url(' + './assets/img/miniatura_pacJon50x50.png' + ')',
-        backgroundSize: 'cover'
-    }
+    const [mostrar, setMostrar] = useState(false)
+    const [desplaza, setDesplaza] = useState(0)
+    // const [anima, setAnima] = useState('animation: none')
 
     const handleClick = () => {
 
         console.log('click')
         setMostrar(!mostrar)
         // setAnima('animation: ocultarLenguajes 1s 1 forwards')
+    }
+
+    const handleCarrusel = (direccion) => {
+
+        // console.log(direccion)
+
+        if (direccion === 'iz' && desplaza > -((json.length - 1) * Settings.offSetHorizontalElementos)) {
+            setDesplaza(desplaza - Settings.offSetHorizontalElementos)
+        
+        } else if (direccion === 'de' && desplaza < Settings.offSetHorizontalElementos) {
+            setDesplaza(desplaza + Settings.offSetHorizontalElementos)
+        }
     }
 
     return (
@@ -34,15 +44,32 @@ export const MisProyectos = ({json}) => {
                 {
                     mostrar &&
                     <section className="h2-contenedor">
-                        <button className="boton-carrusel iz">
+                        <button className="boton-carrusel iz" onClick={() => handleCarrusel('iz')}>
                             <FontAwesomeIcon className="h2 icono" icon={faCaretLeft}/>
                         </button>
 
-                        <button className="boton-carrusel de">
+                        <button className="boton-carrusel de" onClick={() => handleCarrusel('de')}>
                             <FontAwesomeIcon className="h2 icono" icon={faCaretRight}/>
                         </button>
 
-                        <Tarjeta json={json}></Tarjeta>
+                        {
+                            json.map((proyecto, index ) => {
+
+                                return (
+                                    <Tarjeta 
+                                        key={proyecto.nombre}
+                                        posX={index}
+                                        desplaza={desplaza}
+                                        img={proyecto.imagen}
+                                        href={proyecto.url}
+                                        nombre={proyecto.nombre}
+                                        descripcion={proyecto.descripcion}
+                                    ></Tarjeta>
+                                )
+
+                            })
+                        }
+
                     </section>
                 }
             </article>

@@ -27,11 +27,12 @@
     /* padding: 1.2em 1em; */
     animation: none;
     position: relative;
+    overflow: hidden;
 }
 #mis-proyectos .h2-contenedor .tarjeta__proyecto {
     /* border: 1px solid green; */
     border-radius: 5px;
-    width: 50%;
+    width: 49%;
     height: 100%;
     background-color: var(--azul-royal);
     transition: all 0.5s;
@@ -45,7 +46,6 @@
     /* background: url("img/fotoJuan.jpg"); */
     background-position: center center;
     background-size: cover;
-    overflow: hidden;
     position: relative;
 }
 #mis-proyectos .h2-contenedor .tarjeta__proyecto h5 {
@@ -58,9 +58,6 @@
     font-size: var(--letra-mini);
     color: #111;
     display: none;
-}
-#mis-proyectos .h2-contenedor .tarjeta__proyecto h5:hover + p {
-    display: flex;
 }
 .tarjeta__proyecto:hover {
     transform: scale(1.05);
