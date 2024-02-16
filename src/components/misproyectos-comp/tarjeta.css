@@ -21,11 +21,14 @@
     font-size: var(--letra-grande);
     color: var(--azul-marino);
 }
+#mis-proyectos .h2-contenedor .tarjeta__proyecto h5 figure img {
+    opacity: 0.7;
+}
 #mis-proyectos .h2-contenedor .tarjeta__proyecto p {
     padding: 0.1em 0.2em;
-    font-size: var(--letra-mini);
+    font-size: var(--letra-ultramini);
     color: #111;
-    display: none;
+    display: flex;
 }
 .tarjeta__proyecto:hover {
     transform: scale(1.05);
@@ -108,5 +111,6 @@ RESPONSIVE
     }
     #mis-proyectos .h2-contenedor .tarjeta__proyecto p {
         font-size: var(--letra-responsive-ultramini2);
+        display: none;
     }
 }

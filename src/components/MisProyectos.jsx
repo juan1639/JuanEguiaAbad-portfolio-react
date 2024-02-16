@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
-export const MisProyectos = ({json}) => {
+export const MisProyectos = ({json, txtH2, txtBoton}) => {
 
     console.log(json)
 
@@ -32,7 +32,7 @@ export const MisProyectos = ({json}) => {
         <>
             <article id="mis-proyectos">
                 <div className="h2-div-descripcion" onClick={handleClick}>
-                    <h2 className="h2" id="h2-mis-proyectos">Algunos de mis proyectos </h2>
+                    <h2 className="h2" id="h2-mis-proyectos">{txtH2}</h2>
                     {!mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretDown}/>}
                     {mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretUp}/>}
                 </div>
@@ -60,6 +60,8 @@ export const MisProyectos = ({json}) => {
                                         href={proyecto.url}
                                         nombre={proyecto.nombre}
                                         descripcion={proyecto.descripcion}
+                                        txtBoton={txtBoton}
+                                        lenguaje={proyecto.lenguaje}
                                     ></Tarjeta>
                                 )
 

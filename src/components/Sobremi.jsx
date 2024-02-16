@@ -10,7 +10,6 @@ export const Sobremi = ({parrafo1, parrafo2}) => {
     const [mostrar, setMostrar] = useState(false)
 
     const handleClick = () => {
-
         console.log('click')
         setMostrar(!mostrar)
     }

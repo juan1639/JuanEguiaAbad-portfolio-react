@@ -8,6 +8,8 @@ function App() {
 
   const [loadingJson, setLoadingJson] = useState(true)
   const [infoJson, setInfoJson] = useState({})
+  const [infoJsonRepos, setInfoJsonRepos] = useState({})
+  const [infoJsonVideos, setInfoJsonVideos] = useState({})
 
   useEffect(() => {
 
@@ -16,7 +18,8 @@ function App() {
       .then(response => {
         setLoadingJson(false)
         setInfoJson(response.proyectos)
-        console.log(response.proyectos)
+        setInfoJsonRepos(response.recursos)
+        setInfoJsonVideos(response.videos)
       })
     
   }, [])
@@ -40,7 +43,9 @@ function App() {
 
       <MisLenguajes />
 
-      {!loadingJson && <MisProyectos json={infoJson}/>}
+      {!loadingJson && <MisProyectos json={infoJson} txtH2="Algunos de mis proyectos " txtBoton='Jugar' />}
+      {!loadingJson && <MisProyectos json={infoJsonVideos} txtH2="Algunos de mis vídeos " txtBoton='Ver' />}
+      {!loadingJson && <MisProyectos json={infoJsonRepos} txtH2="Algunos de mis repositorios " txtBoton='Repositorio' />}
     </>
   )
 }

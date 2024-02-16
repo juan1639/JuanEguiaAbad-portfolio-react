@@ -51,7 +51,17 @@
     margin: 1em 0.2em 2em 0.2em;
     padding-left: 0.2em;
     font-style: italic;
-    color: var(--azul-royal);
+    /* color: var(--azul-royal); */
+}
+#contacto-mail a {
+    border-radius: 6px;
+    padding: 0.1em 0.4em;
+    text-decoration: none;
+}
+#contacto-mail a:hover {
+    background-color: var(--azul-medio);
+    transform: scale(1.04);
+    text-decoration: none;
 }
 .h2-contenedor div h3 {
     font-size: var(--letra-grande);
