@@ -1,9 +1,7 @@
 import { Settings } from '../../constants/constants'
-import '../misproyectos.css'
+import './tarjeta.css'
 
 export const Tarjeta = ({posX, desplaza, img, href, nombre, descripcion}) => {
-
-    // console.log(img)
 
     const asset = './assets'
     const x = posX * Settings.offSetHorizontalElementos + desplaza
@@ -13,19 +11,17 @@ export const Tarjeta = ({posX, desplaza, img, href, nombre, descripcion}) => {
         overflow: 'hidden'
     }
 
-    const estilo = {
+    const estiloImg = {
         background: 'url(' + asset + img.slice(5) + ')',
         backgroundSize: 'cover'
-        // left: x.toString() + '%'
     }
-    
-    // console.log(estilo)
 
     return (          
         <>
             <div className="tarjeta__proyecto" style={estiloContainer}>
-                <a className="contenedor__imagen-tarjeta" style={estilo} href={href} target="_blank"></a>
-                
+                <a className="contenedor__imagen-tarjeta" style={estiloImg} href={href} target="_blank">
+                    <button className="boton__ver-tarjeta">Jugar</button>
+                </a>
                 <h5>{nombre}<figure><img src="./assets/img/javascript-1.svg" alt="imagen icono html"/></figure></h5>
                 <p>{descripcion}</p>
             </div>

@@ -8,13 +8,11 @@ import './sobremi.css'
 export const Sobremi = ({parrafo1, parrafo2}) => {
 
     const [mostrar, setMostrar] = useState(false)
-    // const [anima, setAnima] = useState('animation: none')
 
     const handleClick = () => {
 
         console.log('click')
         setMostrar(!mostrar)
-        // setAnima('animation: ocultarLenguajes 1s 1 forwards')
     }
 
     return (

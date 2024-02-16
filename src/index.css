@@ -10,6 +10,7 @@
   --azul-royal: royalblue;
   --azul-medio: rgb(56, 65, 157);
   --azul-marino: rgb(32, 14, 58);
+  --azul-degradado: linear-gradient(90deg, #0162c8, #55e7fc);
   --letra-tituloXL: 40px;
   --letra-grande: 28px;
   --letra-normal: 24px;
