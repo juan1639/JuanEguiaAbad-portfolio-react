@@ -47,4 +47,24 @@ export class Settings {
             texto: "Desarrollo apps web Java"
         }
     };
+
+    static dataFooter = {
+        
+        facebook: { 
+            src: "./assets/img/facebook.svg",
+            nombre: "Facebook" 
+        },
+        instagram: {
+            src: "./assets/img/instagram.svg",
+            nombre: "Instagram"
+        },
+        twitter: {
+            src: "./assets/img/twitter-x.svg",
+            nombre: "Twitter"
+        },
+        youtube: {
+            src: "./assets/img/youtube.svg",
+            nombre: "Youtube"
+        }
+    };
 }

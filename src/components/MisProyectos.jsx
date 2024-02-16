@@ -2,7 +2,7 @@
 import { Tarjeta } from './misproyectos-comp/Tarjeta.jsx'
 import { Settings } from '../constants/constants.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faVideo, faCode, faGamepad } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 
 export const MisProyectos = ({json, txtH2, txtBoton}) => {
@@ -11,6 +11,10 @@ export const MisProyectos = ({json, txtH2, txtBoton}) => {
 
     const [mostrar, setMostrar] = useState(false)
     const [desplaza, setDesplaza] = useState(0)
+
+    const icoGamepad= txtBoton === 'Jugar' ? true : false
+    const icoYoutube = txtBoton === 'Ver' ? true : false
+    const icoRepo = txtBoton === 'Repositorio' ? true : false
 
     const handleClick = () => {
 
@@ -33,6 +37,9 @@ export const MisProyectos = ({json, txtH2, txtBoton}) => {
             <article id="mis-proyectos">
                 <div className="h2-div-descripcion" onClick={handleClick}>
                     <h2 className="h2" id="h2-mis-proyectos">{txtH2}</h2>
+                    {icoGamepad && <FontAwesomeIcon className="h2 icon" style={{color: 'seagreen'}} icon={faGamepad}/>}
+                    {icoYoutube && <FontAwesomeIcon className="h2 icon" style={{color: 'royalblue'}} icon={faVideo}/>}
+                    {icoRepo && <FontAwesomeIcon className="h2 icon" style={{color: 'darkcyan'}} icon={faCode}/>}
                     {!mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretDown}/>}
                     {mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretUp}/>}
                 </div>

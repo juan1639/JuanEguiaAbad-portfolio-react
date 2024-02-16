@@ -1,8 +1,11 @@
 import { Header } from './components/Header'
 import { Sobremi } from './components/Sobremi'
 import { MisProyectos } from './components/MisProyectos'
-import { useState, useEffect } from 'react'
 import { MisLenguajes } from './components/MisLenguajes'
+import { Destacado } from './components/Destacado'
+import { Footer } from './components/Footer'
+import { useState, useEffect } from 'react'
+import { Settings } from './constants/constants'
 
 function App() {
 
@@ -28,6 +31,8 @@ function App() {
     backgroundImage: 'url(' + './assets/img/fotoJuan.jpg' + ')'
   }
 
+  const dataFooter = Settings.dataFooter
+
   return (
     <>
       <Header 
@@ -46,6 +51,10 @@ function App() {
       {!loadingJson && <MisProyectos json={infoJson} txtH2="Algunos de mis proyectos " txtBoton='Jugar' />}
       {!loadingJson && <MisProyectos json={infoJsonVideos} txtH2="Algunos de mis vídeos " txtBoton='Ver' />}
       {!loadingJson && <MisProyectos json={infoJsonRepos} txtH2="Algunos de mis repositorios " txtBoton='Repositorio' />}
+
+      <Destacado />
+
+      <Footer dataFooter={dataFooter}/>
     </>
   )
 }

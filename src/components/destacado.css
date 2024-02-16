@@ -1,0 +1,66 @@
+#mis-destacados h4 {
+    font-size: var(--letra-grande);
+    /* text-align: center; */
+    color: var(--blanco);
+    margin: 1em 0 0.2em 0.8em;
+    font-style: oblique;
+    margin-bottom: 0.2em;
+    animation: animaZoomTxt 12s infinite;
+}
+.incrustados {
+    width: 99%;
+    height: fit-content;
+    border: 2px solid var(--azul-masclaro);
+    border-radius: 8px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* align-items: flex-start; */
+    justify-content: space-around;
+    padding: 1em;
+    /* position: relative; */
+    overflow: hidden;
+}
+.incrustados #serie-pacman {
+    max-width: 40%;
+}
+#mis-destacados .incrustados h4 {
+    font-size: var(--letra-grande);
+    color: var(--blanco-azulado);
+}
+.incrustados p {
+    font-size: var(--letra-mini);
+    color: var(--azul-darkcyan);
+    margin: 0.6em 0 0.8em 1.8em;
+}
+/* ------------------------------------------------------- */
+@media (max-width: 600px) {
+    #mis-destacados h4 {
+        font-size: var(--letra-responsive-grande);
+        /* text-align: center; */
+        margin: 0.8em 0 0.2em 0.8em;
+    }
+    .incrustados {
+        width: 99%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        /* align-items: flex-start; */
+        /* justify-content: space-around; */
+        padding: 0.4em;
+        /* position: relative; */
+        overflow: hidden;
+    }
+    .incrustados #serie-pacman {
+        max-width: 80%;
+    }
+    #mis-destacados .incrustados h4 {
+        font-size: var(--letra-responsive-normal);
+        color: var(--blanco-azulado);
+    }
+    .incrustados p {
+        font-size: var(--letra-responsive-mini);
+        color: var(--azul-darkcyan);
+        margin: 0.6em 0 0.8em 1.8em;
+    }
+}

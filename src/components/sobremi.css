@@ -15,7 +15,7 @@
 }
 #h2-sobremi {
     /* color: var(--blanco-azulado); */
-    color: aqua;
+    color: var(--azul-masclaro);
     font-style: italic;
 }
 .h2 {
