@@ -1,15 +1,17 @@
+// import './misproyectos.css'
+import { LenguajeIco } from './mislenguajes-comp/LenguajeIco.jsx'
 import { Settings } from '../constants/constants.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import './misproyectos.css'
 
 export const MisLenguajes = ({}) => {
 
     const [mostrar, setMostrar] = useState(false)
 
-    const handleClick = () => {
+    const gradosProporcion = 360 / Settings.mis_lenguajesImg.length
 
+    const handleClick = () => {
         console.log('click')
         setMostrar(!mostrar)
     }
@@ -18,7 +20,7 @@ export const MisLenguajes = ({}) => {
         <>
             <article id="mis-lenguajes">
                 <div className="h2-div-descripcion" onClick={handleClick}>
-                    <h2 className="h2" id="h2-mis-proyectos">Lenguajes que suelo utilizar </h2>
+                    <h2 className="h2" id="h2-mis-proyectos">Lenguajes/tecnologías que suelo utilizar </h2>
                     {!mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretDown}/>}
                     {mostrar && <FontAwesomeIcon className="h2 icono" icon={faCaretUp}/>}
                 </div>
@@ -26,25 +28,22 @@ export const MisLenguajes = ({}) => {
                 {
                     mostrar &&
                     <section className="h2-contenedor">
-                        Mostrando
-                        {/* {
-                            json.map((proyecto, index ) => {
+                        <div className="slider">
+                            {
+                                Settings.mis_lenguajesImg.map((lang, index) => {
 
-                                return (
-                                    <Tarjeta 
-                                        key={proyecto.nombre}
-                                        posX={index}
-                                        desplaza={desplaza}
-                                        img={proyecto.imagen}
-                                        href={proyecto.url}
-                                        nombre={proyecto.nombre}
-                                        descripcion={proyecto.descripcion}
-                                    ></Tarjeta>
-                                )
+                                    return (
+                                        <LenguajeIco 
+                                            key={lang}
+                                            index={index}
+                                            img={lang}
+                                            gradosProporcion={gradosProporcion}
+                                        ></LenguajeIco>
+                                    )
 
-                            })
-                        } */}
-
+                                })
+                            }
+                        </div>
                     </section>
                 }
             </article>

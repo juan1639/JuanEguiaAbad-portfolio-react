@@ -1,9 +1,9 @@
+// import './sobremi.css'
 import { Titulo } from './sobremi-comp/titulo'
 import { Settings } from '../constants/constants.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretUp, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import './sobremi.css'
 
 export const Sobremi = ({parrafo1, parrafo2}) => {
 

@@ -1,4 +1,4 @@
-import './header.css'
+// import './header.css'
 
 export const Header = ({foto, nombre, ocupacion}) => {
 

@@ -1,3 +1,11 @@
+@import url('./components/header.css');
+@import url('./components/sobremi.css');
+@import url('./components/misproyectos.css');
+@import url('./components/mislenguajes.css');
+/* @import url('./footer.css'); */
+
+@import url('./components/misproyectos-comp/tarjeta.css');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -1,9 +1,9 @@
+// import './misproyectos.css'
 import { Tarjeta } from './misproyectos-comp/Tarjeta.jsx'
 import { Settings } from '../constants/constants.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretLeft, faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import './misproyectos.css'
 
 export const MisProyectos = ({json}) => {
 

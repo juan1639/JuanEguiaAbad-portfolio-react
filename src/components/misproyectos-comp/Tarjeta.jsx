@@ -1,5 +1,5 @@
+// import './tarjeta.css'
 import { Settings } from '../../constants/constants'
-import './tarjeta.css'
 
 export const Tarjeta = ({posX, desplaza, img, href, nombre, descripcion}) => {
 

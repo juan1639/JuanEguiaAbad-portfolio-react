@@ -18,14 +18,16 @@ export class Settings {
     };
 
     static mis_lenguajesImg = [
-        './img/html-1.svg',
-        './img/css-3.svg',
-        './img/javascript-1.svg',
-        './img/jquery-444684.svg',
-        './img/react-2.svg',
-        './img/java.svg',
-        './img/python-4.svg',
-        './img/node-js-736399.svg',
+        './assets/img/astro-logo.svg',
+        './assets/img/html-1.svg',
+        './assets/img/css-3.svg',
+        './assets/img/javascript-1.svg',
+        './assets/img/jquery-444684.svg',
+        './assets/img/react-2.svg',
+        './assets/img/java.svg',
+        './assets/img/python-4.svg',
+        './assets/img/node-js-736399.svg',
+        './assets/img/vite.svg'
     ];
 
     static misTitulos = {
