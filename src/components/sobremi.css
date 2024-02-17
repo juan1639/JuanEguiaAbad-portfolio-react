@@ -46,24 +46,27 @@
     color: var(--azul-darkcyan);
     margin: 1em 0;
 }
-#contacto-mail {
+#contacto-mail, .portfolios {
     font-size: var(--letra-mini);
     margin: 1em 0.2em 2em 0.2em;
     padding-left: 0.2em;
     font-style: italic;
     /* color: var(--azul-royal); */
 }
-#contacto-mail a {
+#contacto-mail a, .portfolios a li {
     border-radius: 6px;
     padding: 0.1em 0.4em;
     text-decoration: none;
 }
-#contacto-mail a:hover {
+.portfolios a li {
+    margin-left: 2.4em;
+}
+#contacto-mail a:hover, .portfolios a li:hover {
     background-color: var(--azul-medio);
     transform: scale(1.04);
     text-decoration: none;
 }
-.h2-contenedor div h3 {
+.h2-contenedor div h3, #otros-portfolios {
     font-size: var(--letra-grande);
     font-style: oblique;
     color: var(--blanco);
@@ -123,14 +126,17 @@ RESPONSIVE
         font-size: var(--letra-responsive-mini);
         margin: 0.5em 0;
     }
-    #contacto-mail {
+    #contacto-mail, .portfolios {
         font-size: var(--letra-responsive-ultramini);
         margin: 1em 0.5em 2em 1em;
         padding-left: 0.4em;
     }
-    .h2-contenedor div h3 {
+    .h2-contenedor div h3, #otros-portfolios {
         font-size: var(--letra-responsive-grande);
         margin-bottom: 0.2em;
+    }
+    .portfolios a li {
+        margin-left: 1.8em;
     }
     #mis-titulos {
         box-shadow: 1px 0 8px var(--azul-masclaro);
@@ -150,7 +156,7 @@ RESPONSIVE
 }
 /* ------------------------------------------ */
 @media (max-width: 600px) {
-    #contacto-mail {
+    #contacto-mail, .portfolios {
         font-size: var(--letra-responsive-ultramini);
         margin: 1em 0.5em 2em 1em;
         padding-left: 0.4em;
@@ -159,6 +165,9 @@ RESPONSIVE
         font-size: var(--letra-responsive-ultramini);
         margin: 1em 0.5em 1em 1em;
         /* color: var(--azul-masclaro); */
+    }
+    .portfolios a li {
+        margin-left: 1.5em;
     }
 }
 

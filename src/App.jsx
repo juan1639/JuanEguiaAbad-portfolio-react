@@ -14,9 +14,11 @@ function App() {
   const [infoJsonRepos, setInfoJsonRepos] = useState({})
   const [infoJsonVideos, setInfoJsonVideos] = useState({})
 
+  const endPoint = 'https://juan1639.github.io/JuanEguiaAbad-portfolio-react/proyectos.json'
+
   useEffect(() => {
 
-    fetch('https://juan1639.github.io/JuanEguiaAbad-portfolio-react/proyectos.json')
+    fetch(Settings.endpointUrl)
       .then(res => res.json())
       .then(response => {
         setLoadingJson(false)

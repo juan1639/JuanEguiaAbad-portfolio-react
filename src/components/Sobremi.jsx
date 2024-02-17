@@ -29,8 +29,16 @@ export const Sobremi = ({parrafo1, parrafo2}) => {
                         <div>
                             <p className='parrafo-sobremi'>{parrafo1}</p>
                             <p className='parrafo-sobremi'>{parrafo2}</p>
+
                             <div id="contacto-mail">
                                 <a href="mailto:juaneguiabad1639@gmail.com">Contactar conmigo <FontAwesomeIcon className="h2 icono" icon={faEnvelope}/></a>
+                            </div>
+
+                            <div id="otros-portfolios">Otros Portfolios hechos en:
+                                <ul class="portfolios">
+                                    <a href="https://juan1639.github.io/juaneguiaabad"><li>Vanilla JavaScript</li></a>
+                                    <a href="https://juan1639.github.io/JuanEguiaAbad-portfolio-react"><li>React (Éste)</li></a>
+                                </ul>
                             </div>
                         </div>
 

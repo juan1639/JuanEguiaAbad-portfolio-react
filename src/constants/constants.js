@@ -3,6 +3,7 @@
 export class Settings {
     
     static endpoint = './src/json/proyectos.json';
+    static endpointUrl = 'https://juan1639.github.io/JuanEguiaAbad-portfolio-react/proyectos.json';
 
     static offSetHorizontalElementos = 50;
     static contador = undefined;
