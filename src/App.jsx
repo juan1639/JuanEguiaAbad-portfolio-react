@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
 
-    fetch('./src/json/proyectos.json')
+    fetch('https://juan1639.github.io/JuanEguiaAbad-portfolio-react/proyectos.json')
       .then(res => res.json())
       .then(response => {
         setLoadingJson(false)
